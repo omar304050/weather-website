@@ -3,7 +3,12 @@ import { useEffect, useState } from 'react';
 import useWeatherStore from './store/store.ts';
 
 export default function Home() {
-  const { city, weather, loading, error, setCity, fetchWeather } = useWeatherStore();
+  const city = useWeatherStore((store) => store.city);
+  const weather = useWeatherStore((store) => store.weather);
+  const loading = useWeatherStore((store) => store.loading);
+  const error = useWeatherStore((store) => store.error);
+  const setCity = useWeatherStore((store) => store.setCity);
+  const fetchWeather = useWeatherStore((store) => store.fetchWeather);
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {

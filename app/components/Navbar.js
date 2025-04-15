@@ -118,6 +118,7 @@ export default function Navbar() {
               <Link
                 href="/contact"
                 className="block px-3 py-2 sm:px-4 sm:py-3 rounded-lg text-white/80 hover:text-white hover:bg-white/10 text-base sm:text-lg"
+
                 onClick={toggleMenu}
               >
                 Contact
